@@ -11,10 +11,13 @@ body {
     background: #DFDBFD;
 }
 
-.wrapper-logo{
+.wrapper-top{
     display: flex;
     justify-content: center;
-    align-content: center;
+}
+
+.wrapper-box{
+    margin: 20px;
 }
 
 .wrapper-text{
@@ -26,43 +29,36 @@ body {
 .wrapper-button{
     display: flex;
     flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
+    align-items: flex-start; 
+    width: 100%;
+    height: 100%;
 }   
 
 .logo{
-    width:60%;
-    height: 30%;
+    max-width:60%;
+    height: auto;
+}
+
+.navbar{
+    display: none;
 }
 
 .image{
     margin-top: 4%;
-    width: 80%;
-    height: 30%;
+    max-width: 100%;
+    height: 40%;
     border-radius: 15px;
 }
 
-h1{
-    font-size: 100%;
-    font-weight: 900;
-    margin-bottom: 1%;
-}
-
-h4{
-    margin-bottom: 2%;
-    font-size: 75%;
-}
-
-p {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 53%;
+.text{
+    max-width: 100%;
+    height: 60%;
 }
 
 .button {
     background: #122130;
     border-radius: 5px;
-    padding: 4px 4px 4px 4px;
+    padding: 4px;
     display: inline-flex;
     align-items: center;
     margin-top: 10px;
@@ -81,7 +77,6 @@ p {
 
 .button-text{
     color: rgb(252, 246, 246);
-    font-size:xx-small;
     margin-left: 5px;
 }
 
@@ -90,111 +85,87 @@ p {
     height: auto;
 }
 
-
-
-
-
-
-
-/*
-
-h1 {
-    font-size: 2rem;
+h1{
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    margin-bottom: 1%;
+}
+h3{
+    display: none;
+}
+h4{
+    margin-bottom: 2%;
+    font-size: clamp(0.7rem, 1.6vw, 1.6rem);
 }
 
 p {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 1rem;
+    font-size: clamp(0.5rem, 1.5vw, 1.2rem);
 }
 
-.text-color-white {
-    color: white;
-}
-
-.text-color-black {
-    color: #122130;
-}
-
-.wrapper-main {
-    margin: 30px;
-    display: flex;
-    flex-direction: row; 
-}
-
-.wrapper-text{
-    background: #5F4BF9;
-    border-radius: 20px;
-    padding: 40px 40px 40px 40px;
-    
-}
-
-.button {
-    background: white;
-    border-radius: 5px;
-    padding: 5px 5px 5px 5px;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 20px;
-    text-decoration: none;
-}
-.wrapper-button-svg{
-    padding: 5px;
-    border-radius: 5px;
-    margin-left: 10px;
-    background: #DFDBFD;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.button-text{
-    margin-left: 5px;
-}
-
-.button-svg{
-    width: 20px;
-    height: auto;
-}
-
-.wrapper-image {
-    display: none;
-}
 
 @media screen and (min-width: 480px){
-    .wrapper-main {
-        flex-direction: column;
-    }
-
-    .wrapper-image {
-        display: block;
-    }
-
-    .image {
-        border-radius: 20px;
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 640px){
-    .wrapper-main {
-        flex-direction: row;
-    }
-
-    .image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .wrapper-text{
+        display: none;
     }
 }
 
 @media screen and (min-width: 768px){
-    .wrapper-main {
-        flex-direction: column;
+    .wrapper-top{
+        justify-content:space-between;
     }
 
-    .image {
-        width: 100%;
-        height: 30vh;
-        object-fit: cover;
+    .logo{
+        width: 450px;
+        height: auto;
     }
-}*/
+
+    .button{
+        padding: 10px 10px 10px 10px;
+    }
+
+
+    .navbar {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        padding: 1em;
+        font-size:large;
+      }
+      
+      .navbar a {
+        color: black; 
+        text-decoration: none;
+        padding: 1em;
+      }
+      
+      .navbar a:hover {
+        background-color: #5F4BF9;
+        transition: 0.3s;
+      }
+
+      h3{
+        display: flex;
+        color:white;
+        padding: 15px;
+        background-color: #5F4BF9;
+        width: 60%;
+        border-radius: 10px;
+        margin-top: 40px;
+      }
+
+      .wrapper-box{
+        display: flex;
+        flex-direction: row;
+      }
+
+      .wrapper-text{
+        display: flex;
+        align-items: center;
+        width: 60%;
+      }
+      
+      .wrapper-button{
+        width:40%;
+      }
+}
